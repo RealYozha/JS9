@@ -8,7 +8,7 @@ function showAboutPC(CPU, RAM, GPU = "Нет") {
         "| Оперативная память:", RAM);
 };
 
-function temperature() {
+function testCpuTemperature() {
     let goodTemp = 0;
     let badTemp = 0;
     let timerId = setInterval(() => {
@@ -44,7 +44,7 @@ function clear() {
 
 sayHey("Саша")
 showAboutPC("Intel Core i5-3450", "4GB x2", "GIGABYTE Raedon RX 570");
-temperature();
+testCpuTemperature();
 undervolt();
 if (confirm("Хотите почистим компютер?")) {
     clear();
