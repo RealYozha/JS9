@@ -1,3 +1,12 @@
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
+
+
 function sayHey(name) {
     console.log("Привет,", name)
 }
@@ -39,12 +48,13 @@ function undervolt() {
 };
 
 function clear() {
-    setTimeout(() => console.log("Мы почистили и заменили термопасту за 5 секунд, обращайтесь"), 5000);
+    setTimeout(() => console.log("Мы почистили ваш ПК и заменили термопасту за 5 секунд, обращайтесь"), 5000);
 };
 
-sayHey("Саша")
+sayHey("незнакомый человек")
 showAboutPC("Intel Core i5-3450", "4GB x2", "GIGABYTE Raedon RX 570");
 testCpuTemperature();
+sleep(20000)
 undervolt();
 if (confirm("Хотите почистим компютер?")) {
     clear();
